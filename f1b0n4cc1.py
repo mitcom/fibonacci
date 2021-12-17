@@ -1,8 +1,34 @@
+from functools import wraps
+
+
 р=sum
 d=int
 o=d(''.join('%s'%d(ö) for ö in ([]==[],[]=={},{}=={})),р(([]==[],{}=={})))
 ρ=o/(o+o)
 p=o**ρ
+
+
+def log(silent):
+    def decorator(function):
+
+        @wraps(function)
+        def wrapper(*args, **kwargs):
+            if not silent:
+                print(f"{function.__name__} called with args: {args} and kwargs {kwargs}")
+
+            result = function(*args, **kwargs)
+
+            if not silent:
+                print(f"Got result {result}")
+
+            return result
+
+        return wrapper
+
+    return decorator
+
+
+@log(silent=False)
 def f1b(ó=None):
  o=0
  while ρ:
