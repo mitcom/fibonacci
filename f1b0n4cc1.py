@@ -2,18 +2,18 @@
 d=int
 ρ=.5
 p=5**ρ
-def f1b(n=None):
- i=0
+def f1b(ó=None):
+ o=0
  while 1:
-  if i==n:
+  if o==ó:
    return
-  if i<=69:
-   j=d(р((((р((1,p))*ρ)**i)/p,ρ)))
-   yield j
-  elif i==70:
-   k=р((j,d(р((((р((1,p))*ρ)**68)/p,ρ)))))
-   yield k
+  if o<=69:
+   о=d(р((((р((1,p))*ρ)**o)/p,ρ)))
+   yield о
+  elif o==70:
+   ο=р((о,d(р((((р((1,p))*ρ)**68)/p,ρ)))))
+   yield ο
   else:
-   j,k=k,р((j,k))
-   yield k
-  i+=1
+   о,ο=ο,р((о,ο))
+   yield ο
+  o+=1
