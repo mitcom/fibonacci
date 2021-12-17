@@ -142,3 +142,7 @@ if __name__ == "__main__":
 
 An actual screenshot of the code
 <br><img src="./code.png" width="1000px"/>
+
+<details><summary>Where is the magic?</summary>
+Please <a href="../../commits">check the commits</a> chronologically
+</details>
