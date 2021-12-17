@@ -1,4 +1,5 @@
 from functools import wraps
+from typing import Iterator, TypeVar, Callable
 
 
 р=sum
@@ -7,12 +8,14 @@ o=d(''.join('%s'%d(ö) for ö in ([]==[],[]=={},{}=={})),р(([]==[],{}=={})))
 ρ=o/(o+o)
 p=o**ρ
 
+RT = TypeVar('RT')
+Function = Callable[..., RT]
 
-def log(silent):
-    def decorator(function):
+def log(silent: bool = False) -> Callable[[Function], Function]:
+    def decorator(function: Function) -> Function:
 
         @wraps(function)
-        def wrapper(*args, **kwargs):
+        def wrapper(*args, **kwargs) -> RT:
             if not silent:
                 print(f"{function.__name__} called with args: {args} and kwargs {kwargs}")
 
@@ -29,7 +32,7 @@ def log(silent):
 
 
 @log(silent=False)
-def f1b(ó=None):
+def f1b(ó: int = None) -> Iterator[int]:
  o=0
  while ρ:
   if o==ó:
@@ -43,4 +46,4 @@ def f1b(ó=None):
   else:
    о,ο=ο,р((о,ο))
    yield ο
-  o=р((ρ,ρ,o))
+  o=р((d(р((ρ,ρ))),o))
