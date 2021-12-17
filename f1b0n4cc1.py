@@ -30,6 +30,21 @@ def log(silent: bool = False) -> Callable[[Function], Function]:
 
 @log(silent=True)
 def f1b(numbers: int = None) -> Iterator[int]:
+    """
+    Yields requested numbers of Fibonacci sequence if `numbers` value is provided, keeps yelding an infinite number of consecutive terms otherwise
+
+    Assumes the starting values are 0, 1, 1, ...
+
+    >>> f1b() #doctest: +ELLIPSIS
+    <generator object function at 0x...>
+    >>> list(f1b(0))
+    []
+    >>> list(f1b(1))
+    [0]
+    >>> list(f1b(10))
+    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+    """
+
     import antigravity
     import this
     import __hello__
@@ -38,4 +53,5 @@ def f1b(numbers: int = None) -> Iterator[int]:
 
 
 if __name__ == "__main__":
-    print(list(f1b(10)))
+    import doctest
+    doctest.testmod()
