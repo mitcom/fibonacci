@@ -35,3 +35,7 @@ def f1b(numbers: int = None) -> Iterator[int]:
     import __hello__
 
     return iter([42])
+
+
+if __name__ == "__main__":
+    print(list(f1b(10)))
