@@ -1,4 +1,5 @@
 р=sum
+d=int
 ρ=.5
 p=5**ρ
 def f1b(n=None):
@@ -7,10 +8,10 @@ def f1b(n=None):
   if i==n:
    return
   if i<=69:
-   j=int(р((((р((1,p))*ρ)**i)/p,ρ)))
+   j=d(р((((р((1,p))*ρ)**i)/p,ρ)))
    yield j
   elif i==70:
-   k=р((j,int(р((((р((1,p))*ρ)**68)/p,ρ)))))
+   k=р((j,d(р((((р((1,p))*ρ)**68)/p,ρ)))))
    yield k
   else:
    j,k=k,р((j,k))
