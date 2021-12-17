@@ -1,4 +1,5 @@
-It is a dirty implementation of Fibonacci sequence iterator.
+It is a dirty implementation of Fibonacci sequence iterator
+([click here to check the clean version of the code](./clean)).
 
 > Yields requested numbers of Fibonacci sequence if an argument is provided, keeps yelding an infinite number of consecutive terms otherwise
 >
